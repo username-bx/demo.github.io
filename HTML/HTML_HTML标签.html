@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn Record</title>
+    <style>
+        /* 初始化 */
+        *{
+            padding: 0;
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        ul li {
+            list-style: none;
+        }
+        a{
+            text-decoration: none;
+        }
+        /* 给页面加个背景颜色 灰色*/
+        body{
+            background-color: #d2d8de;
+        }
+        /* 菜单 横向 */
+        .nav > li {
+            float: left;
+            margin-right: 50px;
+        }
+        /* 清除浮动 */
+        .nav::after{
+            content: '';
+            display: block;
+            clear: both;
+        }
+
+        /* 主标题 */
+        .title{
+            height: 54px;
+            background-color: #fff;
+            box-shadow: -2px -2px 2px #fff,
+                        2px 2px 2px rgba(0,0,0,0.3);
+
+        }
+        .nav li h3{
+            font-size: 26px;
+            font-style: bolder;
+            margin: 12px 80px 12px 12px;
+        }
+        .nav .item{
+            width: 30px;
+            height: 30px;
+            cursor:pointer;
+            font-size: 20px;
+            margin: 13px 30px 12px 30px;
+            overflow: hidden;
+        }
+
+        /* 加阴影 */
+        .nav .item{
+            box-shadow: -9px -9px 2px #fff,
+                        9px 9px 2px rgba(0,0,0,0.2);
+                        transition: box-shadow 0.2s;
+        }
+        /* 鼠标移入 阴影变换 */
+        .nav .item:hover{
+            box-shadow: 0 0 0 #fff,
+                        0 0 0 rgba(0,0,0,0.1),
+                        inset 9px 9px 2px rgba(0,0,0,0.2),
+                        inset -9px -9px 2px #fff;
+        }
+        .nav .item img{
+            width: 30px;
+            opacity: 0.7;
+        }
+        
+        /* 内容区 */
+        .main-area{
+            margin: 20px 20px 0;;
+
+        }
+        .sel,
+        .cont{
+            float: left;
+            margin: 0 10px;
+            box-shadow: -2px -2px 2px #fff,
+                        2px 2px 2px rgba(0,0,0,0.4);
+
+        }
+        /* 左侧内容区 */
+        .sel li{
+            font-size: 16px;
+            
+            text-align: center;
+            width: 150px;
+            height: 30px;
+            line-height: 30px;
+            background-color: #fff;
+            margin-bottom: 2px;
+
+        }
+        /* 左侧内容区 设置字体 */
+        .sel li a{
+            color: rgb(8, 8, 8);
+            font-weight: bolder;
+            font-family: georgia,cursive;
+        }
+        .sel li:hover{
+            background-color: #fcc;
+        }
+        /* 右侧内容区 */
+        .cont .sec-cont > li{
+            width: 800px;
+            font-size: 16px;
+            margin-bottom: 5px;
+            background-color: #fff;
+            box-shadow: -2px -2px 2px #fff,
+                        2px 2px 2px rgba(0,0,0,0.4);
+        }
+        .cont .sec-cont > li:last-child{
+            margin-bottom: 0px;
+        }
+        .cont .sec-cont > li .suo{
+            font-family: times,cursive;
+        }
+        /* suojin */
+        .suo{
+            text-indent: 2em;
+        }
+        h3{
+            font-weight: bolder;
+            color: rgb(154, 155, 224);
+        }
+
+        /* 回到顶部 */
+        .return-top{
+            color: black;
+            width: 90px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            position: fixed;
+            bottom: 50px;
+            right: 50px;
+            background-color: #ffc;
+            border-radius: 19px;
+        }
+        .return-top:hover{
+            background-color: #fcc;
+        }
+    </style>
+</head>
+<body>
+    <!-- 标题  -->
+    
+    <div id='title' class="title">    
+        <ul class="nav">
+            <li>
+                <h3>Learning Record</h3>
+            </li>
+            <li class="item item1">
+                <a href="../HTML/HTML_HTML标签.html"><img src="../img/1.jpg" alt=""></a>
+                <span>html</span>
+            </li>
+            <li class="item ">
+                <a href="../CSS/CSS_简介.html"><img src="../img/2.jpg" alt=""></a>
+                <span>css</span>
+            </li>
+            <li class="item ">
+                <a href="../JS/JS_简介.html"><img src="../img/3.jpg" alt=""></a>
+                <span>js</span>
+            </li>
+        </ul>
+        
+    </div>
+
+
+    <div class="main-area">
+        <div class="sel">
+            <ul>
+                <li><a href="../index.html">首页</a></li>
+                <li><a href="./HTML_HTML简介.html">HTML历史</a></li>
+                <li><a href="#html-start">HTML标签</a></li>
+                <li><a href="#html-html">根标签</a></li>
+                <li><a href="#html-head">结构化标签</a></li>
+                <li><a href="#html-meta">单标签&lt;meta&gt;</a></li>
+                <li><a href="#html-lang">&lt;html lang='en'&gt;</a></li>
+                <li><a href="#html-title">&lt;title&gt;</a></li>
+                <li><a href="#html-p">p</a></li>
+                <li><a href="#html-h">h</a></li>
+                <li><a href="#html-em">em</a></li>
+                <li><a href="#html-strong">strong</a></li>
+                <li><a href="#html-del">del</a></li>
+                <li><a href="#html-div">div</a></li>
+                <li><a href="#html-span">span</a></li>
+
+                <li><a href="#html-space">空格</a></li>
+                <li><a href="#html-special">特殊编码</a></li>
+                <li><a href="#html-solo">单标签</a></li>
+                <li><a href="#html-ol">有序列表</a></li>
+                <li><a href="#html-ul">无序列表</a></li>
+                <li><a href="#html-img">图片</a></li>
+                <li><a href="#html-a">a标签</a></li>
+                <li><a href="#html-form">form表单</a></li>
+                
+                
+            </ul>
+        </div>
+
+
+        <div class="cont">
+            <ul class="sec-cont">
+                <li>
+                    <ul>
+                        <h3 html-strat>HTML标签</h3>
+                        <li class="suo">HTML 标记标签通常被称为 HTML 标签 (HTML tag)。</li>
+                        <li class="suo">HTML 标签是由尖括号包围的关键词，比如 &lt;html&gt;&lt;/html&gt;</li>
+                        <li class="suo">HTML 标签通常是成对出现的，比如 &lt;b&gt; 和 &lt;/b&gt;</li>
+                        <li class="suo">标签对中的第一个标签是开始标签，第二个标签是结束标签</li>
+                    </ul>
+                </li>
+                <li>
+                    <ul>
+                        <h3 html-html>根标签</h3>
+                        <li class="suo">&lt;html&gt; &lt;/html&gt;</li>
+                        <li class="suo">所有的内容都写在根标签里面</li>
+                    </ul>
+                </li>
+                <li>
+                    <ul>
+                        <h3 id="html-head">结构化标签</h3>
+                        <li class="suo">结构化标签有两个，&lt;head&gt;&lt;/head&gt; ,&lt;body&gt;&lt;/body&gt;</li>
+                        <li class="suo">head里面存放的是给浏览器看的</li>
+                        <li class="suo">body里面存放的是给用户看的</li>
+                    </ul>
+                </li>
+                <li>
+                    <ul>
+                        <h3 id="html-meta">单标签&lt;meta&gt;</h3>
+                        <li class="suo">&lt;meta charset='UTF-8'&gt; 表示给浏览器一本字典，这样浏览器就能识别各国语言</li>
+                    </ul>
+                </li>
+                <li>
+                    <ul>
+                        <h3 html-lang>&lt;html lang='en'&gt;</h3>
+                        <li class="suo">&lt;html lang='en'&gt; 告诉搜索引擎爬虫，我们的网站是关于什么内容的，更方便它    
+                            来抓取我们的网站。</li>
+                    </ul>
+                </li>
+                <li>
+                    <ul>
+                        <h3 id="html-title">&lt;title&gt;</h3>
+                        <li class="suo">作用：设置网页的页脚标</li>
+                    </ul>
+                </li>
+                <li>
+                    <ul>
+                        <h3 id="html-p">p</h3>
+                        <li class="suo">作用：段落标签</li>
+                        <li class="suo">特点：独占一行</li>
+                    </ul>
+                </li>
+                <li>
+                    <ul>
+                        <h3 id="html-h">h</h3>
+                        <li class="suo">作用：标题标签</li>
+                        <li class="suo">特点：独占一行，h1-h6字体逐渐变小</li>
+                        <li class="suo"><h1>标题</h1></li>
+                        <li class="suo"><h2>标题</h2></li>
+                        <li class="suo"><h3>标题</h3></li>
+                        <li class="suo"><h4>标题</h4></li>
+                        <li class="suo"><h5>标题</h5></li>
+                        <li class="suo"><h6>标题</h6></li>
+                        
+                    </ul>
+                </li>
+                <li>
+                    <ul>
+                        <h3 id="html-em">em</h3>
+                        <li class="suo">作用：斜体</li>
+                        <li class="suo">特点：内容决定大小，不会独占一行</li>
+                        <li class="suo"><em>举个例子</em></li>
+                    </ul>
+                </li>
+                <li>
+                    <ul>
+                        <h3 id="html-strong">strong</h3>
+                        <li class="suo">作用：加粗</li>
+                        <li class="suo">特点：内容决定大小，不会独占一行</li>
+                        <li class="suo"><strong>举个例子</strong></li>
+                    </ul>
+                </li>
+                <li>
+                    <ul>
+                        <h3 id="html-del">del</h3>
+                        <li class="suo">作用：中划线</li>
+                        <li class="suo">特点：内容决定大小，不会独占一行</li>
+                        <li class="suo"><del>举个例子</del></li>
+                    </ul>
+                </li>
+                <li>
+                    <ul>
+                        <h3 id="html-div">div</h3>
+                        <li class="suo">作用：容器，绑定化操作</li>
+                        <li class="suo">特点：内容决定大小，不会独占一行</li>
+                    </ul>
+                </li>
+                <li>
+                    <ul>
+                        <h3 id="html-span">span</h3>
+                        <li class="suo">作用：容器，绑定化操作</li>
+                        <li class="suo">特点：独占一行</li>
+                    </ul>
+                </li>
+
+                <li>
+                    <ul>
+                        <h3 id="html-space">空格</h3>
+                        <li class="suo">作用：只用作文字分隔符</li>
+                        <li class="suo">特点：多个空格，只会被当作一个文字分隔符</li>
+                    </ul>
+                </li>
+                <li>
+                    <ul>
+                        <h3 id="html-special">特殊编码</h3>
+                        <li class="suo">三个特殊编码：& nbsp; & lt; & gt;</li>
+                        <li class="suo"> & nbsp; -- 空格</li>
+                        <li class="suo"> & lt; -- 左尖角号</li>
+                        <li class="suo"> & gt; -- 右尖角号</li>
+                    </ul>
+                </li>
+                <li>
+                    <ul>
+                        <h3 id="html-solo">单标签</h3>
+                        <li class="suo">一对标签：致力于把包裹的内容作用成它想作用成的样子</li>
+                        <li class="suo">单标签：自己就是一个功能，不需要包裹内容</li>
+                        <li class="suo">&lt;br&gt; -- 回车</li>
+                        <li class="suo">&lt;hr&gt; -- 一条线</li>
+                    </ul>
+                </li>
+                <li>
+                    <ul>
+                        <h3 id="html-ol">有序列表</h3>
+                        <li class="suo">&lt;ol&gt;有三个属性，type，reversed，start</li>
+                        <li class="suo">type='1' -- 按照1,2，3排序</li>
+                        <li class="suo">type='i' -- 按照罗马数字排序</li>
+                        <li class="suo">type='a' -- 按照a, b, c排序</li>
+                        <li class="suo">type='A' -- 按照A, B, C排序</li>
+                        <li class="suo">reversed='reversed' -- 反向排序</li>
+                        <li class="suo">strart='3' -- 从序号的第三位开始排序</li>
+                    </ul>
+                </li>
+                <li>
+                    <ul>
+                        <h3 id="html-ul">无序列表</h3>
+                        <li class="suo">&lt;ol&gt;有三个属性，type，reversed，start</li>
+                        <li class="suo">type='disc' -- 实心圆排序</li>
+                        <li class="suo">type='circle' -- 空心圈排序</li>
+                        <li class="suo">type='square' -- 实心方块排序</li>
+                        <li class="suo">reversed='reversed' -- 反向排序</li>
+                        <li class="suo">strart='3' -- 从序号的第三位开始排序</li>
+                    </ul>
+                </li>
+                <li>
+                    <ul>
+                        <h3 id="html-img">图片</h3>
+                        <li class="suo">src='' -- 图片路径</li>
+                        <li class="suo">alt='' -- 图片占位符</li>
+                        <li class="suo">title='' -- 图片提示符</li>
+                    </ul>
+                </li>
+                <li>
+                    <ul>
+                        <h3 id="html-a">a标签</h3>
+                        <li class="suo">1.超链接</li>
+                        <li class="suo">2.锚点</li>
+                        <li class="suo">3.打电话 发邮件</li>
+                        <li class="suo">4.协议限定符</li>
+                    </ul>
+                </li>
+                <li>
+                    <ul>
+                        <h3 id="html-form">form表单</h3>
+                        <li class="suo">提交数据：必须有数据名和数据值</li>
+                        <li class="suo">输入框: input type='text' name=''</li>
+                        <li class="suo">这是输入框 :<input type="text"></li>
+                        <li class="suo">密码框: input type='password' name='' value=''</li>
+                        <li class="suo">这是密码框：<input type="password"></li>
+                        <li class="suo"></li>
+                        <li class="suo">单选框: input type='radio' name='' value=''</li>
+                        <li class="suo">复选框: input type='checkbox' name='' value=''</li>
+                        <li class="suo">提交按钮：input type='submit' value=''</li>
+                        <li class="suo">默认选中：input checked='checked'</li>
+                        <li class="suo">section option</li>
+
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <a class='return-top' href="#title">回到顶部</a>
+    </div>
+
+</body>
+</html>

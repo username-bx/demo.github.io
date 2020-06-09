@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn Record</title>
+    <style>
+        /* 初始化 */
+        *{
+            padding: 0;
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        ul li {
+            list-style: none;
+        }
+        a{
+            text-decoration: none;
+        }
+        /* 给页面加个背景颜色 灰色*/
+        body{
+            background-color: #d2d8de;
+        }
+        /* 菜单 横向 */
+        .nav > li {
+            float: left;
+            margin-right: 50px;
+        }
+        /* 清除浮动 */
+        .nav::after{
+            content: '';
+            display: block;
+            clear: both;
+        }
+
+        /* 主标题 */
+        .title{
+            height: 54px;
+            background-color: #fff;
+            box-shadow: -2px -2px 2px #fff,
+                        2px 2px 2px rgba(0,0,0,0.3);
+
+        }
+        .nav li h3{
+            font-size: 26px;
+            font-style: bolder;
+            margin: 12px 80px 12px 12px;
+        }
+        .nav .item{
+            width: 30px;
+            height: 30px;
+            cursor:pointer;
+            font-size: 20px;
+            margin: 13px 30px 12px 30px;
+            overflow: hidden;
+        }
+
+        /* 加阴影 */
+        .nav .item{
+            box-shadow: -9px -9px 2px #fff,
+                        9px 9px 2px rgba(0,0,0,0.2);
+                        transition: box-shadow 0.2s;
+        }
+        /* 鼠标移入 阴影变换 */
+        .nav .item:hover{
+            box-shadow: 0 0 0 #fff,
+                        0 0 0 rgba(0,0,0,0.1),
+                        inset 9px 9px 2px rgba(0,0,0,0.2),
+                        inset -9px -9px 2px #fff;
+        }
+        .nav .item img{
+            width: 30px;
+            opacity: 0.7;
+        }
+        
+        /* 内容区 */
+        .main-area{
+            margin: 20px 20px 0;;
+
+        }
+        .sel,
+        .cont{
+            float: left;
+            margin: 0 10px;
+            box-shadow: -2px -2px 2px #fff,
+                        2px 2px 2px rgba(0,0,0,0.4);
+
+        }
+        /* 左侧内容区 */
+        .sel{
+            
+            /* width: 170px;
+            height: 300px;
+            background-color: #fff; */
+        }
+        .sel li{
+            font-size: 16px;
+            color: #000;
+            text-align: center;
+            width: 150px;
+            height: 30px;
+            line-height: 30px;
+            background-color: #fff;
+            margin-bottom: 2px;
+
+        }
+        .sel li:hover{
+            background-color: #fcc;
+        }
+        /* 右侧内容区 */
+        .cont{
+            
+
+            width: 800px;
+            /* height: 500px; */
+            background-color: #fff;
+
+            
+        }
+        
+
+        /* 回到顶部 */
+        .return-top{
+            color: black;
+            width: 90px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            position: fixed;
+            bottom: 50px;
+            right: 50px;
+            background-color: #ffc;
+            border-radius: 19px;
+        }
+        .return-top:hover{
+            background-color: #fcc;
+        }
+    </style>
+</head>
+<body>
+    <!-- 标题 下拉菜单 -->
+    
+    <div id='title' class="title">    
+        <ul class="nav">
+            <li>
+                <h3>Learning Record</h3>
+            </li>
+            <li class="item item1">
+                <img src="./img/1.jpg" alt="">
+                <span>html</span>
+
+                <ul class="sec-nav">
+                    <li><a href="#">Day1</a></li>
+                    <li>Day2</li>
+                    <li>Day3</li>
+                </ul>
+            </li>
+            <li class="item ">
+                <img src="./img/2.jpg" alt="">
+                <span>css</span>
+            </li>
+            <li class="item ">
+                <img src="./img/3.jpg" alt="">
+                <span>js</span>
+            </li>
+        </ul>
+        
+    </div>
+
+
+    <div class="main-area">
+        <div class="sel">
+            <ul class="plan">
+                
+                <li><a href="#html-p">HTML</a></li>
+                <li><a href="#html-h">CSS</a></li>
+                <li><a href="#html-h">JS</a></li>
+                
+            </ul>
+        </div>
+
+
+        <div class="cont">
+            <h2 id="html-start">html标签</h2>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <p id="html-p">p标签是段落标签</p>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <p id="html-h">h1-h6是标题标签 h1最大 h6最小
+                <h1>这是h1标签</h1>
+                <h2>这是h2标签</h2>
+                <h3>这是h3标签</h3>
+                <h4>这是h4标签</h4>
+                <h5>这是h5标签</h5>
+                <h6>这是h6标签</h6>
+            </p>
+        </div>
+        <a class='return-top' href="#title">回到顶部</a>
+    </div>
+
+</body>
+</html>

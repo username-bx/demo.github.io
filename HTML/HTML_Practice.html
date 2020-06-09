@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn Record</title>
+    <style>
+        /* 初始化 */
+        *{
+            padding: 0;
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        ul li {
+            list-style: none;
+        }
+        a{
+            text-decoration: none;
+        }
+        /* 给页面加个背景颜色 灰色*/
+        body{
+            background-color: #d2d8de;
+        }
+        /* 菜单 横向 */
+        .nav > li {
+            float: left;
+            margin-right: 50px;
+        }
+        /* 清除浮动 */
+        .nav::after{
+            content: '';
+            display: block;
+            clear: both;
+        }
+
+        /* 主标题 */
+        .title{
+            height: 54px;
+            background-color: #fff;
+            box-shadow: -2px -2px 2px #fff,
+                        2px 2px 2px rgba(0,0,0,0.3);
+
+        }
+        .nav li h3{
+            font-size: 26px;
+            font-style: bolder;
+            margin: 12px 80px 12px 12px;
+        }
+        .nav .item{
+            width: 30px;
+            height: 30px;
+            cursor:pointer;
+            font-size: 20px;
+            margin: 13px 30px 12px 30px;
+            overflow: hidden;
+        }
+
+        /* 加阴影 */
+        .nav .item{
+            box-shadow: -9px -9px 2px #fff,
+                        9px 9px 2px rgba(0,0,0,0.2);
+                        transition: box-shadow 0.2s;
+        }
+        /* 鼠标移入 阴影变换 */
+        .nav .item:hover{
+            box-shadow: 0 0 0 #fff,
+                        0 0 0 rgba(0,0,0,0.1),
+                        inset 9px 9px 2px rgba(0,0,0,0.2),
+                        inset -9px -9px 2px #fff;
+        }
+        /* 标题 图片 */
+        .nav .item img{
+            width: 30px;
+            opacity: 0.7;
+        }
+        /* 内容区 */
+        .main-area{
+            margin: 20px 20px 0;;
+
+        }
+        .sel,
+        .cont{
+            float: left;
+            margin: 0 10px;
+            box-shadow: -2px -2px 2px #fff,
+                        2px 2px 2px rgba(0,0,0,0.4);
+
+        }
+        /* 左侧内容区 */
+        .sel li{
+            font-size: 16px;
+            color: #000;
+            text-align: center;
+            width: 150px;
+            height: 30px;
+            line-height: 30px;
+            background-color: #fff;
+            margin-bottom: 2px;
+
+        }
+        .sel li:hover{
+            background-color: #fcc;
+        }
+        /* 右侧内容区 */
+        .cont .sec-cont > li{
+            width: 800px;
+            font-size: 16px;
+            margin-bottom: 5px;
+            background-color: #fff;
+            box-shadow: -2px -2px 2px #fff,
+                        2px 2px 2px rgba(0,0,0,0.4);
+        }
+        .cont .sec-cont > li:last-child{
+            margin-bottom: 0px;
+        }
+        .cont .sec-cont > li .suo{
+            height: 40px;
+            line-height: 30px;
+            font-family: times,cursive;
+        }
+        /* suojin */
+        .suo{
+            text-indent: 2em;
+        }
+        h3{
+            font-weight: bolder;
+            color: rgb(154, 155, 224);
+        }
+        
+
+        /* 回到顶部 */
+        .return-top{
+            color: black;
+            width: 90px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            position: fixed;
+            bottom: 50px;
+            right: 50px;
+            background-color: #ffc;
+            border-radius: 19px;
+        }
+        .return-top:hover{
+            background-color: #fcc;
+        }
+    </style>
+</head>
+<body>
+    <!-- 标题  -->
+    
+    <div id='title' class="title">    
+        <ul class="nav">
+            <li>
+                <h3>Learning Record</h3>
+            </li>
+            <li class="item item1">
+                <a href="../HTML/HTML_HTML标签.html"><img src="../img/1.jpg" alt=""></a>
+                <span>html</span>
+            </li>
+            <li class="item ">
+                <a href="../CSS/CSS_简介.html"><img src="../img/2.jpg" alt=""></a>
+                <span>css</span>
+            </li>
+            <li class="item ">
+                <a href="../JS/JS_简介.html"><img src="../img/3.jpg" alt=""></a>
+                <span>js</span>
+            </li>
+        </ul>
+        
+    </div>
+
+
+    <div class="main-area">
+        <div class="sel">
+            <ul class="plan">
+                <li><a href="../index.html">首页</a></li>
+                <li><a href="#html-one">第一天</a></li>
+                <li><a href="#html-two">第二天</a></li>
+                <li><a href="#html-three">第三天</a></li>
+                <li><a href="#html-four">第四天</a></li>
+                
+                
+            </ul>
+        </div>
+
+
+        <div class="cont">
+            <ul class="sec-cont">
+                <li>
+                    <h3>1. HTML标签身上的lang属性，下面说法不正确的是（c）</h3>
+                    <ul>
+                        <li class="suo">A:定义HTML标签内使用的语言。</li>
+                        <li class="suo">B:向搜索引擎表示该页面为html页面，并且为英文网站。</li>
+                        <li class="suo">C:如果lang=en表示在页面当中不允许存在中文。</li>
+                    </ul>
+                </li>
+                <li>
+                    <h3>2. 下面有关HTML Doctype的描述，说法错误的是（d）</h3>
+                    <ul>
+                        <li class="suo">A:它的责任就是告诉浏览器文档使用哪种html或者xhtml规范</li>
+                        <li class="suo">B:不同文档模式主要影响CSS内容的呈现，尤其是浏览器对盒模型的解析。</li>
+                        <li class="suo">C:不同浏览器在混杂模式下的行为差异非常大，如果不使用某种hack技术，跨浏览器的行为根本就没有一致性可言。</li>
+                        <li class="suo">D:如果在文档开始处没有发现文档类型声明，则所有浏览器都会默认开启严格模式</li>
+                    </ul>
+                </li>
+                <li>
+                    <h3>3. meta标签的用途错误的是(d)</h3>
+                    <ul>
+                        <li class="suo">A:&lt;meta&gt;元素课提供有关页面的元信息（meta - information )，比如针对搜索引擎和更新频度的描述和关键词。</li>
+                        <li class="suo">B:&lt;meta&gt;元素提供了关于网站的各种信息。</li>
+                        <li class="suo">C:&lt;meta&gt;元素除去(charset)属性外，都是http - equiv属性或name属性结合content来使用。</li>
+                        <li class="suo">D:如果想要告诉搜索引擎你的站点的描述的主要内容是什么可以设置&lt;meta name = "keywords" content = "页面内容描述"/&gt;。</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <a class='return-top' href="#title">回到顶部</a>
+    </div>
+
+</body>
+</html>
